@@ -89,7 +89,7 @@ score = softmax(\frac{QK^T}{\sqrt{d}})V
 其中:Q:(num_q,q) K:(num_k,k) V:(num_k,v) d=q
 score:(num_q,v)
 '''
-class SDotProductAttn(nn.Module):
+class DotProductAttn(nn.Module):
     def __init__(self,dropout,**kargs):
         super().__init__()
         # 需要学的只有Dropout 不要和self attention混淆了
